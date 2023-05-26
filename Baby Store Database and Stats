@@ -1,0 +1,27 @@
+--Create a baby store database
+
+CREATE TABLE baby_store (id INTEGER PRIMARY KEY, name TEXT, color TEXT, price INTEGER, monthly_sales INTEGER);
+
+INSERT INTO baby_store VALUES (1, "bib", "pink", 5.99, 100.00);
+INSERT INTO baby_store VALUES (2, "mittens", "blue", 3.99, 80.00);
+INSERT INTO baby_store VALUES (3, "diapers", "white", 19.99, 500.00); 
+INSERT INTO baby_store VALUES (4, "pacifier", "green", 6.99, 250.00);
+INSERT INTO baby_store VALUES (5, "booties", "yellow", 12.99, 400.00);
+INSERT INTO baby_store VALUES (6, "desitin", "N/A", 8.99, 250.00);
+INSERT INTO baby_store VALUES (7, "jarred food", "N/A", 3.99, 150.00);
+INSERT INTO baby_store VALUES (8, "formula", "N/A", 18.99, 650.00);
+INSERT INTO baby_store VALUES (9, "onesie", "Beige", 4.99, 200.00);
+INSERT INTO baby_store VALUES (10, "rattle", "brown", 5.00, 80.00);
+INSERT INTO baby_store VALUES (11, "jumper", "white", 49.99, 800.00);
+INSERT INTO baby_store VALUES (12, "teething ring", "blue", 6.99, 115.00);
+INSERT INTO baby_store VALUES (13, "rocking horse", "red", 89.99, 900.00);
+INSERT INTO baby_store VALUES (14, "socks", "white", 3.99, 250.00);
+INSERT INTO baby_store VALUES (15, "thermometer", "blue", 50.00, 850.00);
+
+--Display the database ordered by price.
+SELECT * from baby_store ORDER BY price;
+
+--Display the items in the store that had monthly sales greater than $250.
+SELECT * from baby_store
+WHERE monthly_sales >=250
+Order by monthly_sales
